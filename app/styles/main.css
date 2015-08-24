@@ -92,3 +92,99 @@ body {
 .navright{
     
 }
+.toggler{
+    width: 500px;
+    height: 500px;
+}
+#button {
+    padding: .5em 1em;
+    text-decoration: none;
+}
+#effect {
+    width: 240px;
+    height: 135px;
+    padding: 0.4em;
+    position: relative;
+}
+#effect h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+#panel, #flip {
+    right:0;
+    padding: 10px;
+    text-align: right;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: auto;
+    display: none;
+}
+.panelRight{
+    width: 700px;
+}
+.panelLeft{
+    text-align:left;
+    left: 0px;
+}
+#toggle {
+    width: 300px;
+    height: 600px;
+    background: #ccc;
+  }
+.slide {
+  position: relative;
+}
+.slide .inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/*main css*/
+* {
+    font-family: Helvetica;
+}
+#container {
+    float:right;
+    width: 400px;
+    height: 800px;
+    margin: 20px 40px;
+    position: relative;
+    color: white;
+    padding: 20px;
+}
+#drawer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-x: hidden; /* Needed for initial hidden state */
+}
+#drawer > div {
+    height: 100%;
+    border-left: 1px;
+    float: left;
+}
+#drawer-handle {
+    width: 15px;
+    background-color: #777;
+    opacity:0.8;
+}
+#drawer-handle:after {
+    content: "<";
+    position: absolute;
+    top: 50%;
+    padding: 2px;
+}
+#drawer-content {
+    width:         200px;
+    margin-right: -200px; /* -width */
+    background-color: #c3c3c3;
+}
+#drawer-content > p {
+    padding: 10px;
+}

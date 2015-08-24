@@ -1,8 +1,32 @@
+<script>
+    $(document).ready(function () {
+        var expanded = false;
+        $("#drawer-handle").click(function () {
+            if (expanded = !expanded) {
+                $("#drawer-content").animate({ "margin-right": 0 }, "slow");
+            } else {
+                $("#drawer-content").animate({ "margin-right": -200 }, "slow");
+            }
+        });
+    });
+</script>
+
 <div class="row">
     <div class="col-md-6">
-        Right side
+
     </div>
-    <div class="col-md-6">
-        Left side
+    <div id="container" class="col-md-6">
+        <div id="drawer">
+            <div id="drawer-handle">
+            </div>
+            <div id="drawer-content">
+                <h1>Settings</h1>
+                <p>Desktop</p>
+                <p>Control Panel</p>
+                <p>Personalization</p>
+                <p>Help</p>
+            </div>
+
+        </div>
     </div>
 </div>
