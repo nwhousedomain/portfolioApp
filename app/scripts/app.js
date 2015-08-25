@@ -54,13 +54,20 @@ angular
           //controller: 'resume.controller',
           //dcontrollerAs: 'main'
       })
-
+     .state('main.personalisation', {
+         url: '/personalisation',
+         templateUrl: 'Views/personalisation.html',
+     })
 
      $stateProvider.state('resume', {
          url: '/resume',
          templateUrl: 'views/resume.html',
          //controller: 'resume.controller',
          //controllerAs: 'main'
+     });
+     $stateProvider.state('startmenu', {
+         url: '/startmenu',
+         templateUrl: 'Views/startmenu.html',
      });
 
  });

@@ -46,47 +46,71 @@
 
 <div class="row">
     <div class="col-md-6">
-        <div id="summary" class="ui-widget-content">
-            <img src="../images/summary.png" />
-            <h6>summary.doc</h6>
+        <div class="foldersize">
+            <div id="summary" class="ui-widget-content">
+                <img src="../images/summary.png" />
+                <h6>summary.doc</h6>
+            </div>
         </div>
+        
         <!--Experience control-->
-        <div id="experience" class="ui-widget-content">
-            <a ng-click="expShowModal=true">
-                <img src="../images/experience.png" />
-            </a>
-            <h6>Experience</h6>
+        <div class="foldersize">
+            <div id="experience" class="ui-widget-content">
+                <a ng-click="expShowModal=true">
+                    <img src="../images/experience.png" />
+                </a>
+                <h6>Experience</h6>
+            </div>
         </div>
+        
         <!--Education control-->
-        <div id="education" class="ui-widget-content">
-            <img src="../images/Education.png" />
-            <h6>Educations</h6>
+        <div class="foldersize">
+            <div id="education" class="ui-widget-content">
+                <img src="../images/Education.png" />
+                <h6>Educations</h6>
+            </div>
         </div>
+        
         <!--Skills control-->
-        <div id="skill" class="ui-widget-content">
-            <img src="../images/Skill.png" />
-            <h6>Skills</h6>
+        <div class="foldersize">
+            <div id="skill" class="ui-widget-content">
+                <img src="../images/Skill.png" />
+                <h6>Skills</h6>
+            </div>
         </div>
+        
         <!--Award control-->
-        <div id="award" class="ui-widget-content">
-            <img src="../images/Award.png" />
-            <h6>Award</h6>
+        <div class="foldersize">
+            <div id="award" class="ui-widget-content">
+                <img src="../images/Award.png" />
+                <h6>Award</h6>
+            </div>
         </div>
+        
         <!--PDF control-->
-        <div id="pdf" class="ui-widget-content">
-            <img src="../images/pdf.png" />
-            <h6>PDF</h6>
+        <div class="foldersize">
+            <div id="pdf" class="ui-widget-content">
+                <img src="../images/pdf.png" />
+                <h6>PDF</h6>
+            </div>
         </div>
+        
         <!--presentation control-->
-        <div id="presentation" class="ui-widget-content">
-            <img src="../images/powerpoint.png" />
-            <h6>Presentation</h6>
+        <div class="foldersize">
+            <div id="presentation" class="ui-widget-content">
+                <img src="../images/powerpoint.png" />
+                <h6>Presentation</h6>
+            </div>
         </div>
+       
         <!--Recycle control-->
-        <div id="recycle" class="ui-widget-content">
-            <img src="../images/recycle.png" />
-            <h6>Recycle</h6>
+        <div class="foldersize">
+            <div id="recycle" class="ui-widget-content">
+                <img src="../images/recycle.png" />
+                <h6>Recycle</h6>
+            </div>
         </div>
+       
 
     </div>
     <div id="container" class="col-md-6">
@@ -94,10 +118,10 @@
             <div id="drawer-handle">
             </div>
             <div id="drawer-content">
-                <h1>Settings</h1>
-                <p><li><a ui-sref="#/">Desktop</a></li></p>
+                <h1>Settings</h1>               
+                <p><li class="active"><a ui-sref="main">Desktop</a></li></p>
                 <p><li><a ui-sref="#/">Control Panel</a></li></p>
-                <p><li><a ui-sref="#/">Personalization</a></li></p>
+                <p><li><a ng-click="personalmodal=true">Personalization</a></li></p>
                 <p><li><a ui-sref="#/">Help</a></li></p>
                
             </div>
@@ -106,3 +130,5 @@
     </div>
 </div>
 <ng-include src="'experiencemodal.html'" ng-show="expShowModal"></ng-include>
+<ng-include src="'startmenu.html'" ng-show="startShowModal"></ng-include>
+<ng-include src="'personalisation.html'" ng-show="personalmodal"></ng-include>

@@ -62,7 +62,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 1900px) {
   .container {
-    max-width: 1900px;
+    max-width: 100%;
   }
 
   /* Remove the padding we set earlier */
@@ -170,15 +170,15 @@ body {
     float: left;
 }
 #drawer-handle {
-    width: 15px;
+    width: 10px;
     background-color: #777;
-    opacity:0.8;
+    opacity:0.5;
 }
 #drawer-handle:after {
-    content: "<";
+    content: "::";
     position: absolute;
     top: 50%;
-    padding: 2px;
+    padding: 1px;
 }
 #drawer-content {
     width:         200px;
@@ -259,6 +259,10 @@ body {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 }
+.foldersize{
+    width: 42px;
+    height: 45;
+}
 .h6style{
     font-size: 10px;
 }
@@ -273,7 +277,66 @@ body {
     height: 150px;
     padding: 0.5em;
 }
-    #resizable h3 {
+#resizable h3 {
         text-align: center;
         margin: 0;
     }
+.mstart{
+    position:fixed;
+    top: 400px;
+    width: 400px;
+    height: 400px;
+    background-color: #000000;
+}
+.right-col{
+    background-color: #0026ff;
+}
+.left-col{
+    background-color: #00ff21;
+}
+.personalModal{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color:rgb(0,0,0,0);
+    border: 1px solid green;
+}
+.personalheadModal{
+    left: 0px;
+    right: 0px;
+    width: 600px;
+    height: 45px;
+    background-color:white;
+}
+.personalRightModal{
+    height: 500px;
+    width: 180px;
+    background-color:white;
+}
+
+.personalLeftModal{
+    height: 500px;
+    width: 420px;
+    background-color: #b6ff00;
+    border: 1px solid green;
+}
+.personalfooterModal{
+    width: 600px;
+    background-color:white;
+}
+.personalbodyModal{
+    width: 600px;
+}
+.personalCenterModal{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.personalsize{
+    width: 42px;
+    height: 45;
+}
