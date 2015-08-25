@@ -237,7 +237,7 @@ body {
 .folderRightModal{
     height: 500px;
     width: 180px;
-    background-color:#e6e6e6;
+    background-color:#f2f2f2;
 }
 
 .folderLeftModal{
@@ -262,3 +262,18 @@ body {
 .h6style{
     font-size: 10px;
 }
+/*shadow controls*/
+.divsahdow{
+    width: 580px;
+    height: 530px;
+    box-shadow: 0px 10px 30px 1px black;
+}
+#resizable {
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
+    #resizable h3 {
+        text-align: center;
+        margin: 0;
+    }
