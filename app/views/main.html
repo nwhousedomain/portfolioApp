@@ -66,24 +66,33 @@
         <!--Education control-->
         <div class="foldersize">
             <div id="education" class="ui-widget-content">
-                <img src="../images/Education.png" />
-                <h6>Educations</h6>
+                <a ng-click="eduShowModal=true">
+                    <img src="../images/Education.png" />
+                </a>
+                    <h6>Educations</h6>
+                    
             </div>
         </div>
         
         <!--Skills control-->
         <div class="foldersize">
             <div id="skill" class="ui-widget-content">
-                <img src="../images/Skill.png" />
-                <h6>Skills</h6>
+                <a ng-click="skillsShowModal=true">
+                    <img src="../images/Skill.png" />
+                </a>
+                    <h6>Skills</h6>
+                   
             </div>
         </div>
         
         <!--Award control-->
         <div class="foldersize">
             <div id="award" class="ui-widget-content">
-                <img src="../images/Award.png" />
-                <h6>Award</h6>
+                <a ng-click="awardShowModal=true">
+                    <img src="../images/Award.png" />
+                </a>
+                    <h6>Award</h6>
+                    
             </div>
         </div>
         
@@ -118,8 +127,8 @@
             <div id="drawer-handle">
             </div>
             <div id="drawer-content">
-                <h1>Settings</h1>               
-                <p><li class="active"><a ui-sref="main">Desktop</a></li></p>
+                <h1>Settings</h1>   
+                <p><li><a href="javascript:history.go(0)">Desktop</a></li></p>            
                 <p><li><a ui-sref="#/">Control Panel</a></li></p>
                 <p><li><a ng-click="personalmodal=true">Personalization</a></li></p>
                 <p><li><a ui-sref="#/">Help</a></li></p>
@@ -132,3 +141,6 @@
 <ng-include src="'experiencemodal.html'" ng-show="expShowModal"></ng-include>
 <ng-include src="'startmenu.html'" ng-show="startShowModal"></ng-include>
 <ng-include src="'personalisation.html'" ng-show="personalmodal"></ng-include>
+<ng-include src="'education.html'" ng-show="eduShowModal"></ng-include>
+<ng-include src="'skills.html'" ng-show="skillsShowModal"></ng-include>
+<ng-include src="'award.html'" ng-show="awardShowModal"></ng-include>
