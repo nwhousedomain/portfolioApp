@@ -54,9 +54,19 @@ angular
           //controller: 'resume.controller',
           //dcontrollerAs: 'main'
       })
+          .state('main.backgroundimage', {
+              url: '/backgroundcolor',
+              templateUrl: 'views/Shared/backgroundcolor.html',
+              //controller: 'resume.controller',
+              //dcontrollerAs: 'main'
+          })
      .state('main.personalisation', {
          url: '/personalisation',
          templateUrl: 'Views/personalisation.html',
+     })
+     .state('main.controlpanel', {
+         url: '/controlpanel',
+         templateUrl: 'Views/controlpanel.html',
      })
 
      $stateProvider.state('resume', {
@@ -65,9 +75,6 @@ angular
          //controller: 'resume.controller',
          //controllerAs: 'main'
      });
-     $stateProvider.state('startmenu', {
-         url: '/startmenu',
-         templateUrl: 'Views/startmenu.html',
-     });
+    
 
  });

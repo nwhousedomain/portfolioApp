@@ -33,7 +33,43 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-              <a class="navbar-brand" ng-click="startShowModal=true">portfolioApp</a>
+              <li class="dropup">
+                  <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Start</a>
+                  <ul class="dropdown-menu">
+                      <script language="javascript">
+                          function send()
+                          { document.theform.submit() }
+                      </script>
+                      <div id="startmenu">
+
+                          <ul id="programs">
+                              <li><a href="#"><img src="images/firefox.png" alt="" />Mozilla Firefox</a></li>
+                              <li><a href="#"><img src="images/chrome1.png" alt="" />Google Chrome</a></li>
+                              <li><a href="#"><img src="images/safari.png" alt="" />Git Hub</a></li>
+                              <li><a href="#"><img src="images/opera.png" alt="" />facebook</a></li>
+                              <li><a href="#"><img src="images/ie.png" alt="" />twitter</a></li>
+                              <li><a href="#"><img src="images/rss_32.png" alt="" />Instagram</a></li>
+                              <li><a href="#"><img src="images/twitter_32.png" alt="" />linkdin</a></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-menu-right">All Programs</span></a></li>
+                              <!--Search bar-->
+                              <form action="/search" method="get" class="searchfmenu" name="theform">
+                                  <input type="text" name="q" value="SEARCH" id="searchf" />
+                              </form>
+                          </ul>
+
+                          <ul id="links">
+                              <li class="icon"><img src="images/avatar.png" alt="" /></li>
+                              <li><a href="#"><span>Documents</span></a></li>
+                              <li><a href="#"><span>Pictures</span></a></li>
+                              <li><a href="#"><span>Music</span></a></li>
+                              <li><a href="#"><span>Computer</span></a></li>
+                              <li><a href="#"><span>Network</span></a></li>
+                              <li><a data-toggle="modal" data-target="#myModal"><span>Control Panel</span></a></li>
+                              <li><a href="#"><span>Help and Support</span></a></li>
+                          </ul>
+                      </div>
+                  </ul>
+              </li>
           </div>
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
               <div>
@@ -42,6 +78,20 @@
                           <li class="active"><a ui-sref="main">Home</a></li>
                           <li><a ui-sref="resume">PDF</a></li>
                           <li><a ui-sref="#/">Presentation</a></li>
+                          <li class="dropup">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropup<span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <div>Hello World</div>
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li role="separator" class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                  <li role="separator" class="divider"></li>
+                                  <li><a href="#">One more separated link</a></li>
+                              </ul>
+
+                          </li>
                       </ul>
                   </div> 
                   <div>
@@ -81,6 +131,8 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
+
+   
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -104,6 +156,6 @@
         <script src="scripts/controllers/main.controller.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
-      
+
 </body>
 </html>

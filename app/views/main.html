@@ -43,7 +43,7 @@
 
 </script>
 
-
+<ng-include src="'controlpanel.html'" ng-show="myModal"></ng-include>
 <div class="row">
     <div class="col-md-6">
         <div class="foldersize">
@@ -122,7 +122,7 @@
        
 
     </div>
-    <div id="container" class="col-md-6">
+    <div id="container" class="col-md-6 pull-right">
         <div id="drawer">
             <div id="drawer-handle">
             </div>
@@ -139,7 +139,6 @@
     </div>
 </div>
 <ng-include src="'experiencemodal.html'" ng-show="expShowModal"></ng-include>
-<ng-include src="'startmenu.html'" ng-show="startShowModal"></ng-include>
 <ng-include src="'personalisation.html'" ng-show="personalmodal"></ng-include>
 <ng-include src="'education.html'" ng-show="eduShowModal"></ng-include>
 <ng-include src="'skills.html'" ng-show="skillsShowModal"></ng-include>
