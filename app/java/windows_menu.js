@@ -1,11 +1,10 @@
-﻿<script>
-//Draggable
+﻿//Draggable
 $(function () {
-    $(".windows").draggable({
-        cancel: '.windows_inner, .buttonrow',
+    $(".window").draggable({
+        cancel: '.window_inner, .buttonrow',
         containment: '#handle_area',
         scroll: false,
-        stack: '.windows'
+        stack: '.window'
     });
 });
 //Sortable
@@ -20,11 +19,11 @@ $(function () {
 });
 //Resizeable
 $(function () {
-    $(".windows").resizable({
+    $(".window").resizable({
         handles: 'n, e, s, w, ne, se, sw, nw',
         containment: '#handle_area',
-        minHeight: 250,
-        minWidth: 500,
+        minHeight: 80,
+        minWidth: 138,
         maxHeight: $('#handle_area').height() - 33,
         maxWidth: $('#handle_area').width()
     });
@@ -40,39 +39,39 @@ $(document).ready(function () {
     var cur_w;
     var cur_offset;
     //Start Position
-    $('.windows').each(function (i) {
+    $('.window').each(function (i) {
         var offset = $(this).position();
         $(this).css({ 'left': offset.left + i * 30 + 'px', 'top': offset.top + i * 30 + 'px' });
     });
     // Close a Window
     $(".close").click(function () {
-        $(this).parent().parent(".windows").remove();
+        $(this).parent().parent(".window").remove();
     });
     // Minimize a Window
     $(".min").click(function () {
-        $(this).parent().parent(".windows").fadeOut("fast");
+        $(this).parent().parent(".window").fadeOut("fast");
     });
     // Aero Peek
     $("#aero_peek").hover(
 		function () {
-		    $(".windows > *").fadeOut("normal");
-		    $(".windows").addClass("trans_win");
+		    $(".window > *").fadeOut("normal");
+		    $(".window").addClass("trans_win");
 		},
 		function () {
-		    $(".windows > *").fadeIn("slow");
-		    $(".windows").removeClass("trans_win");
+		    $(".window > *").fadeIn("slow");
+		    $(".window").removeClass("trans_win");
 		}
 	);
     $("#aero_peek").click(function () {
-        if ($(".windows:visible").length == 0) {
-            $(".windows").fadeIn("slow");
+        if ($(".window:visible").length == 0) {
+            $(".window").fadeIn("slow");
         } else {
-            $(".windows").fadeOut("fast");
+            $(".window").fadeOut("fast");
         };
     });
     // Doubleclick Maximize
     $(".title").dblclick(function () {
-        var windowbox = $(this).parent(".windows");
+        var windowbox = $(this).parent(".window");
         var maxHeight = windowbox.resizable('option', 'maxHeight');
         var maxWidth = windowbox.resizable('option', 'maxWidth');
         if (windowbox.hasClass("maximized") == false) {
@@ -94,8 +93,8 @@ $(document).ready(function () {
         };
     });
     // Maximize Button
-    $(".windows .max").click(function () {
-        var windowbox = $(this).parent().parent(".windows");
+    $(".window .max").click(function () {
+        var windowbox = $(this).parent().parent(".window");
         var maxHeight = windowbox.resizable('option', 'maxHeight');
         var maxWidth = windowbox.resizable('option', 'maxWidth');
         if (windowbox.hasClass("maximized") == false) {
@@ -117,14 +116,14 @@ $(document).ready(function () {
         };
     });
     // Add Focus
-    $(".windows").last().addClass("focus_win");
-    $(".windows").mousedown(function () {
+    $(".window").last().addClass("focus_win");
+    $(".window").mousedown(function () {
         $(".focus_win").removeClass("focus_win");
         $(this).addClass("focus_win");
     });
     // Remove Focus
     $("#taskbar,#handle_area").not("#handle_area *").mousedown(function () {
-        $(".windows").removeClass("focus_win");
+        $(".window").removeClass("focus_win");
     });
     $("body *").not("#start,#startmenu,#startmenu *,#taskbar,#page").mousedown(function () {
         if ($("#start").hasClass("active")) {
@@ -146,45 +145,6 @@ $(document).ready(function () {
     setInterval(function () {
         var d = new Date();
         var m = d.getMonth() + 1;
-        $("#clock").html(checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + "<br />" + checkTime(d.getDate()) + "." + checkTime(m) + "." + d.getFullYear());
+        $("#clock").html(checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + "<br/>" + checkTime(d.getDate()) + "." + checkTime(m) + "." + d.getFullYear());
     }, 1000);
 });
-    </script>
-<div>
-    <div id="expmod" class="folderCenterModal">
-        <div id="page">
-            <div id="handle_area"></div>
-            <div class="windows">
-                <div class="titles">
-                    <div id="foldercontainer">
-
-                        <div id="backarrow">
-
-                            <img src="images/back_icon.png" />
-                            <img src="images/forward_icon.png" />
-                            <span class="caret"></span>
-                        </div>
-
-                        <div id="address">
-                            <div class="address">
-                                <img src="images/folder.png" /><span class="glyphicon glyphicon-triangle-right"></span>This PC<span class="glyphicon glyphicon-triangle-right"></span>Desktop<span class="glyphicon glyphicon-triangle-right"></span>Experience<span class="caret"></span><span class="refresh"><img src="images/refresh_icon.png" /></span>
-
-                            </div>
-                        </div>
-                    
-                    </div>
-                </div>  
-                <div class="btns_row">
-                    <a title="Close" class="btns close">x</a>
-                    <a title="Maxmimize" class="btns max">o</a>
-                    <a title="Minimize" class="btns min">_</a>
-                </div>
-               
-                <div class="windows_inner">
-                    Hello world
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>    

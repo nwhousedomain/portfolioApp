@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  background-image:url("/images/wallpaper.jpg");
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -39,6 +40,7 @@ body {
 
 .container-narrow > hr {
   margin: 30px 0;
+  
 }
 
 /* Main marketing message and sign up button */
@@ -60,7 +62,7 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 00px) {
   .container {
     max-width: 100%;
   }
@@ -253,8 +255,8 @@ body {
     width: 600px;
 }
 .folderCenterModal{
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -524,3 +526,54 @@ body {
     width:40%;
 }
 
+/*Windows Folder*/
+.address{
+    font-size: 9pt;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    width:;
+}
+.
+.refresh{
+   border-left: thick solid;
+}
+#foldercontainer {
+    width: auto;
+    margin: 0 auto;
+}
+#backarrow {
+    margin-left: 1px;
+    margin-right: 15px;
+    float: left;
+    width: auto;
+}
+
+#address {
+    float: left;
+    width: auto;
+}
+
+#secondary {
+    float: left;
+    width: auto;
+}
+.searchiconmenu{
+    background-color: #fbfbfb; 
+    font-size: 10px; 
+    border: 0px; 
+    text-transform: uppercase; 
+    margin-top: 0px; 
+    color: #999; 
+    letter-spacing: 1px; 
+    padding: 0px auto;
+    font-family: calibri, helvetica, arial;
+    width: 100%;
+}
+#searchiconbtn{
+    height: 20px; 
+    vertical-align: top;
+}
+#searchicon {
+    background:  #f5f5f5 left center no-repeat;
+    background-size: 10px 10px;
+}

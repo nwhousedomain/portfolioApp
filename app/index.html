@@ -13,7 +13,9 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-      <script src="java/JavaScript.js"></script>
+     <link href="styles/Windows.css" rel="stylesheet" />
+      <script type="" src="java/JavaScript.js"></script>
+      <script type="text/javascript" src ="java/windows_menu.js"></script>
     <!-- endbuild -->
   </head>
   <body ng-app="portfolioAppApp">
@@ -34,7 +36,7 @@
               <span class="icon-bar"></span>
             </button>
               <li class="dropup">
-                  <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Start</a>
+                  <a id="starts" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Start</a>
                   <ul class="dropdown-menu">
                       <script language="javascript">
                           function send()
