@@ -310,7 +310,7 @@ img.alignleft {
 	height:40px;
 	padding:0 90px 0 57px;
 }
-.programs {
+.program {
 	border:1px solid transparent;
 	float:left;
 	height:38px;
@@ -321,7 +321,7 @@ img.alignleft {
 	top:-1px;
 	width:58px;
 }
-.programs:hover {
+.program:hover {
 	background:-moz-radial-gradient(center bottom, circle, rgba(100,255,255,0.5), rgba(10,200,255,0) 30%);
 }
 #programlist .active {
@@ -337,7 +337,7 @@ img.alignleft {
 #programlist .active:hover {
 	background:-moz-radial-gradient(center bottom, circle, rgba(255,150,10,0.75), rgba(255,150,10,0.3) 80%) rgba(255,255,255,0.5);
 }
-.programs img {
+.program img {
 	vertical-align:middle;
 }
 #handle_area {

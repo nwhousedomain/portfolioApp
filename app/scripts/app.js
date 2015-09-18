@@ -68,10 +68,36 @@ angular
          url: '/controlpanel',
          templateUrl: 'Views/controlpanel.html',
      })
+      .state('main.desktop', {
+          url: '/desktop',
+          templateUrl: 'Views/Shared/desktop.html',
+      })
+      .state('main.document', {
+          url: '/document',
+          templateUrl: 'Views/Shared/document.html',
+      })
+     .state('main.video', {
+         url: '/video',
+         templateUrl: 'Views/Shared/video.html',
+     })
+     .state('main.download', {
+         url: '/download',
+         templateUrl: 'Views/Shared/download.html',
+     })
+     .state('main.picture', {
+         url: '/picture',
+         templateUrl: 'Views/Shared/picture.html',
+     })
 
      $stateProvider.state('resume', {
          url: '/resume',
          templateUrl: 'views/resume.html',
+         //controller: 'resume.controller',
+         //controllerAs: 'main'
+     })
+     $stateProvider.state('presentation', {
+         url: '/presentation',
+         templateUrl: 'views/presentation.htmll',
          //controller: 'resume.controller',
          //controllerAs: 'main'
      });

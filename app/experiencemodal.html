@@ -149,6 +149,22 @@ $(document).ready(function () {
         $("#clock").html(checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + "<br />" + checkTime(d.getDate()) + "." + checkTime(m) + "." + d.getFullYear());
     }, 1000);
 });
+$(document).ready(function () {
+    $("#pc").click(function () {
+        $("#pcpanel").slideToggle();
+    });
+});
+$(document).ready(function () {
+    $("#lib").click(function () {
+        $("#libpanel").slideToggle();
+    });
+});
+$(document).ready(function () {
+    $("#net").click(function () {
+        $("#netpanel").slideToggle();
+    });
+});
+
     </script>
 <div>
     <div id="expmod" class="folderCenterModal">
@@ -181,7 +197,49 @@ $(document).ready(function () {
                 </div>
                
                 <div class="windows_inner">
-                    Hello world
+                    <div id="infoldercontainer">
+                        <div id="header">
+                            <p>Header</p>
+                        </div>
+
+                        <div id="sidebar">
+                            <ul id="folderselect">
+                                <li><a href="#"><img src="images/favorite_icon.png" alt="" />Favorites</a></li>
+                                <li><a ui-sref="main.desktop"><img src="images/desktop_icon.png" alt=""/>Desktop</a></li>
+                                <li><a ui-sref="main.download"><img src="images/downloads_icon.png" alt="" />Downloads</a></li>
+                                <li><a ui-sref="main.document"><img src="images/folder.png" alt="" />Documents</a></li>
+                                <li><a ui-sref="main.video"><img src="images/video_icon.png" alt="" />Vidoes</a></li>
+                                <li><a id="lib"><img src="images/lib_icon.png" />My Library</a></li>
+                                <div id="libpanel" class="folderpanel">
+                                    <li><a ui-sref="main.document"><img src="images/doc_icon.png" />Documents</a></li>
+                                    <li><a ui-sref="main.music"><img src="images/music_icon.png" />Music</a></li>
+                                    <li><a ui-sref="main.picture"><img src="images/pix_icon.png" />Pictures</a></li>
+                                </div>
+                                <li><a id="pc"><img src="images/mypc_icon.png" />My Computer</a></li>
+                                <div id="pcpanel" class="folderpanel">
+                                    <li><a href="#"><img src="images/Windowshhd_icon.png" />Windows (C:)</a></li>
+                                    <li><a href="#"><img src="images/hhd_icons.png" />Storage (D:)</a></li>
+                                </div>
+                                <li><a id="net"><img src="images/network_icon.png" />Network</a></li>
+                                <div id="netpanel" class="folderpanel">
+                                     <li><a href="#"><img src="images/mypc_icon.png" />cosmos-server</a></li>
+                                    <li><a href="#"><img src="images/mypc_icon.png" />Nwhouse-PC</a></li>
+                                    <li><a href="#"><img src="images/mypc_icon.png" />WorkStation</a></li>
+                                    <li><a href="#"><img src="images/printer_icon.png" />Printer</a></li>
+                                </div>
+                            </ul>
+                            
+                                
+                            
+                        </div>
+                        
+                        <div id="bodycontent">
+                            <div ui-view></div>
+                        </div>
+                        <div id="footer">
+                            <p>Footer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
