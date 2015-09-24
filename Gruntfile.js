@@ -361,8 +361,14 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'views/{,*/}*.html',
+            'bower_components/**/*',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'fonts/*',
+            'package.json', 
+            'server.js',    
+            'Procfile' 
           ]
         }, {
           expand: true,
@@ -461,4 +467,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
 };
