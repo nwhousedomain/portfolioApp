@@ -46,76 +46,21 @@
 <ng-include src="'controlpanel.html'" ng-show="myModal"></ng-include>
 <div class="row">
     <div class="col-md-6">
-        <div class="foldersize">
-            <div id="summary" class="ui-widget-content">
-                <img src="../images/summary.png" />
-                <h6>summary.doc</h6>
-            </div>
-        </div>
-        
+       
         <!--Experience control-->
         <div class="foldersize">
             <div id="experience" class="ui-widget-content">
                 <a ng-click="expShowModal=true">
-                    <img src="images/experience.png" />
+                    <img src="images/icons/experience.png" />
                 </a>
-                <h6>Experience</h6>
+                <h6>Resume Folder</h6>
             </div>
-        </div>
-        
-        <!--Education control-->
-        <div class="foldersize">
-            <div id="education" class="ui-widget-content">
-                <a ng-click="eduShowModal=true">
-                    <img src="../images/Education.png" />
-                </a>
-                    <h6>Educations</h6>
-                    
-            </div>
-        </div>
-        
-        <!--Skills control-->
-        <div class="foldersize">
-            <div id="skill" class="ui-widget-content">
-                <a ng-click="skillsShowModal=true">
-                    <img src="../images/Skill.png" />
-                </a>
-                    <h6>Skills</h6>
-                   
-            </div>
-        </div>
-        
-        <!--Award control-->
-        <div class="foldersize">
-            <div id="award" class="ui-widget-content">
-                <a ng-click="awardShowModal=true">
-                    <img src="../images/Award.png" />
-                </a>
-                    <h6>Award</h6>
-                    
-            </div>
-        </div>
-        
-        <!--PDF control-->
-        <div class="foldersize">
-            <div id="pdf" class="ui-widget-content">
-                <img src="../images/pdf.png" />
-                <h6>PDF</h6>
-            </div>
-        </div>
-        
-        <!--presentation control-->
-        <div class="foldersize">
-            <div id="presentation" class="ui-widget-content">
-                <img src="../images/powerpoint.png" />
-                <h6>Presentation</h6>
-            </div>
-        </div>
-       
+        </div>  
+   
         <!--Recycle control-->
         <div class="foldersize">
             <div id="recycle" class="ui-widget-content">
-                <img src="../images/recycle.png" />
+                <img src="../images/icons/recycle.png" />
                 <h6>Recycle</h6>
             </div>
         </div>
@@ -138,6 +83,7 @@
         </div>
     </div>
 </div>
+<ng-include src="'/views/Shared/coverletter.html'" ng-show="coverShowModal"></ng-include>
 <ng-include src="'experiencemodal.html'" ng-show="expShowModal"></ng-include>
 <ng-include src="'personalisation.html'" ng-show="personalmodal"></ng-include>
 <ng-include src="'education.html'" ng-show="eduShowModal"></ng-include>

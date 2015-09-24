@@ -19,10 +19,45 @@
     <!-- endbuild -->
   </head>
   <body ng-app="portfolioAppApp">
+      <!--facebook button-->
+      <div id="fb-root"></div>
+      <script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+          //End facebook
+//instagram
+    (function (d, t) {
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.src = "//x.instagramfollowbutton.com/follow.js";
+        s.parentNode.insertBefore(g, s);
+    }(document, "script"));
+          //End Instagram
+          //twitter
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],
+            p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src=p+'://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');
+          //end twitter
+          //github
+    
+      </script>
+      <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-      
+
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
@@ -41,26 +76,18 @@
                       <script language="javascript">
                           function send()
                           { document.theform.submit() }
-                      </script>
+      </script>
                       <div id="startmenu">
 
                           <ul id="programs">
-                              <li><a href="#"><img src="images/firefox.png" alt="" />Mozilla Firefox</a></li>
-                              <li><a href="#"><img src="images/chrome1.png" alt="" />Google Chrome</a></li>
-                              <li><a href="#"><img src="images/github_icon.png" alt="" />Git Hub</a></li>
-                              <li><a href="#"><img src="images/facebook_icon.png" alt="" />facebook</a></li>
-                              <li><a href="#"><img src="images/twitter_icon.png" alt="" />twitter</a></li>
-                              <li><a href="#"><img src="images/instagram_icon.png" alt="" />Instagram</a></li>
-                              <li><a href="#"><img src="images/linkedin_icon.png" alt="" />linkedin</a></li>
-                              <li class="dropdown dropdown-submenu">
-                                  <a href ="#" class="dropdown-toggle" data-toggle="dropdown">All Programs<span class="glyphicon glyphicon-menu-right"></span></ahref>
-                                 <ul class="dropdown-menu">
-                                     <li><a href="#">Dropdown Submenu Link 4.1</a></li>
-                                     <li><a href="#">Dropdown Submenu Link 4.2</a></li>
-                                     <li><a href="#">Dropdown Submenu Link 4.3</a></li>
-                                     <li><a href="#">Dropdown Submenu Link 4.4</a></li>
-                                 </ul>
-                              </li>
+                              <li><a href="https://en.wikipedia.org/wiki/Emmanuel_Maisonneuve" target="_blank"><img src=" images/icons/firefox.png" alt="" />Mozilla Firefox</a></li>
+                              <li><a href="https://en.wikipedia.org/wiki/Emmanuel_Maisonneuve" target="_blank"><img src="images/icons/chrome1.png" alt="" />Google Chrome</a></li>                            
+                              <li><a href="https://github.com/nwhousedomain"><img src=" images/icons/github_icon.png" alt="" />@nwhousedomain</a></li>
+                              <li><a class="fb-like" data-href="https://www.facebook.com/nwhousedomain" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true">facebook</a></li>      
+                              <li><a href="https://twitter.com/nwhousedomain" data-show-count="false" data-show-screen-name="false"><img src=" images/icons/twitter_icon.png" alt="" />@nwhousedomain</a></li>                     
+                              <li><a class="ig-follow" data-id="3e76b28641" data-handle="nwhousedomain" data-count="false" data-size="small" data-username="true"></a></li>                             
+                              <li><a href="https://www.linkedin.com/pub/emmanuel-maisonneuve/60/588/548"><img src="images/icons/linkedin_icon.png"  alt="View Emmanuel Maisonneuve's profile on LinkedIn">LinkedIn
+                                  </a></li>                                                  
                               <!--Search bar-->
                               <form action="/search" method="get" class="searchfmenu" name="theform">
                                   <input type="text" name="q" value="SEARCH" id="searchf" />
@@ -68,7 +95,7 @@
                           </ul>
 
                           <ul id="links">
-                              <li class="icon"><img src="images/avatar.png" alt="" /></li>
+                              <li class="icon"><img src="images/icons/avatar.png" alt="" /></li>
                               <li><a href="#"><span>Documents</span></a></li>
                               <li><a href="#"><span>Pictures</span></a></li>
                               <li><a href="#"><span>Music</span></a></li>
@@ -131,7 +158,7 @@
 
    
     </script>
-
+      <!-- Place this tag right after the last button or just before your close body tag. -->    
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>

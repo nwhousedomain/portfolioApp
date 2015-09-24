@@ -64,10 +64,7 @@ angular
          url: '/personalisation',
          templateUrl: 'Views/personalisation.html',
      })
-     .state('main.controlpanel', {
-         url: '/controlpanel',
-         templateUrl: 'Views/controlpanel.html',
-     })
+    
       .state('main.desktop', {
           url: '/desktop',
           templateUrl: 'Views/Shared/desktop.html',
@@ -88,19 +85,15 @@ angular
          url: '/picture',
          templateUrl: 'Views/Shared/picture.html',
      })
+       .state('main.game', {
+           url: '/game',
+           templateUrl: 'Views/Shared/game.html',
+       })
 
      $stateProvider.state('resume', {
          url: '/resume',
          templateUrl: 'views/resume.html',
          //controller: 'resume.controller',
          //controllerAs: 'main'
-     })
-     $stateProvider.state('presentation', {
-         url: '/presentation',
-         templateUrl: 'views/presentation.htmll',
-         //controller: 'resume.controller',
-         //controllerAs: 'main'
-     });
-    
-
+     })    
  });

@@ -1,25 +1,14 @@
-﻿//Draggable
-$(function () {
-    $(".window").draggable({
-        cancel: '.window_inner, .buttonrow',
+﻿$(function () {
+    var window = $(".windows");
+    //Draggable
+    window.draggable({
+        cancel: '.windows_inner, .buttonrow',
         containment: '#handle_area',
         scroll: false,
-        stack: '.window'
+        stack: '.windows'
     });
-});
-//Sortable
-$(function () {
-    $("#programlist").sortable({
-        axis: 'x',
-        containment: '#programlist',
-        tolerance: 'pointer',
-        revert: true
-    });
-    $("#programlist").disableSelection();
-});
-//Resizeable
-$(function () {
-    $(".window").resizable({
+    //Resizeable
+    window.resizable({
         handles: 'n, e, s, w, ne, se, sw, nw',
         containment: '#handle_area',
         minHeight: 80,
@@ -27,6 +16,17 @@ $(function () {
         maxHeight: $('#handle_area').height() - 33,
         maxWidth: $('#handle_area').width()
     });
+});
+//Sortable
+$(function () {
+    var programlist = $("#programlist");
+    programlist.sortable({
+        axis: 'x',
+        containment: '#programlist',
+        tolerance: 'pointer',
+        revert: true
+    });
+    programlist.disableSelection();
 });
 //Time
 function checkTime(i) {
@@ -38,40 +38,45 @@ $(document).ready(function () {
     var cur_h;
     var cur_w;
     var cur_offset;
+    var window = $(".windows");
+    var start = $("#start");
+    var startmenu = $("#startmenu");
+    var aeropeek = $("#aero_peek");
+    var windowall = $(".windows > *");
     //Start Position
-    $('.window').each(function (i) {
+    window.each(function (i) {
         var offset = $(this).position();
         $(this).css({ 'left': offset.left + i * 30 + 'px', 'top': offset.top + i * 30 + 'px' });
     });
     // Close a Window
     $(".close").click(function () {
-        $(this).parent().parent(".window").remove();
+        $(this).parents(".windows").remove();
     });
     // Minimize a Window
     $(".min").click(function () {
-        $(this).parent().parent(".window").fadeOut("fast");
+        $(this).parents(".windows").fadeOut("fast");
     });
     // Aero Peek
-    $("#aero_peek").hover(
+    aeropeek.hover(
 		function () {
-		    $(".window > *").fadeOut("normal");
-		    $(".window").addClass("trans_win");
+		    windowall.fadeOut("normal");
+		    window.addClass("trans_win");
 		},
 		function () {
-		    $(".window > *").fadeIn("slow");
-		    $(".window").removeClass("trans_win");
+		    windowall.fadeIn("slow");
+		    window.removeClass("trans_win");
 		}
 	);
-    $("#aero_peek").click(function () {
-        if ($(".window:visible").length == 0) {
-            $(".window").fadeIn("slow");
+    aeropeek.click(function () {
+        if ($(".windows:visible").length == 0) {
+            window.fadeIn("slow");
         } else {
-            $(".window").fadeOut("fast");
+            window.fadeOut("fast");
         };
     });
     // Doubleclick Maximize
     $(".title").dblclick(function () {
-        var windowbox = $(this).parent(".window");
+        var windowbox = $(this).parent(".windows");
         var maxHeight = windowbox.resizable('option', 'maxHeight');
         var maxWidth = windowbox.resizable('option', 'maxWidth');
         if (windowbox.hasClass("maximized") == false) {
@@ -93,8 +98,8 @@ $(document).ready(function () {
         };
     });
     // Maximize Button
-    $(".window .max").click(function () {
-        var windowbox = $(this).parent().parent(".window");
+    window.find(".max").click(function () {
+        var windowbox = $(this).parent().parent(".windows");
         var maxHeight = windowbox.resizable('option', 'maxHeight');
         var maxWidth = windowbox.resizable('option', 'maxWidth');
         if (windowbox.hasClass("maximized") == false) {
@@ -116,29 +121,29 @@ $(document).ready(function () {
         };
     });
     // Add Focus
-    $(".window").last().addClass("focus_win");
-    $(".window").mousedown(function () {
+    window.last().addClass("focus_win");
+    window.mousedown(function () {
         $(".focus_win").removeClass("focus_win");
         $(this).addClass("focus_win");
     });
     // Remove Focus
     $("#taskbar,#handle_area").not("#handle_area *").mousedown(function () {
-        $(".window").removeClass("focus_win");
+        window.removeClass("focus_win");
     });
     $("body *").not("#start,#startmenu,#startmenu *,#taskbar,#page").mousedown(function () {
-        if ($("#start").hasClass("active")) {
-            $("#start").removeClass("active");
-            $("#startmenu").hide();
+        if (start.hasClass("active")) {
+            start.removeClass("active");
+            startmenu.hide();
         };
     });
     // Startmenu
-    $("#start").mousedown(function () {
+    start.mousedown(function () {
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
-            $("#startmenu").hide();
+            startmenu.hide();
         } else {
             $(this).addClass("active");
-            $("#startmenu").show();
+            startmenu.show();
         };
     });
     // Clock
@@ -147,4 +152,24 @@ $(document).ready(function () {
         var m = d.getMonth() + 1;
         $("#clock").html(checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + "<br/>" + checkTime(d.getDate()) + "." + checkTime(m) + "." + d.getFullYear());
     }, 1000);
+});
+$(document).ready(function () {
+    $("#pc").click(function () {
+        $("#pcpanel").slideToggle();
+    });
+});
+$(document).ready(function () {
+    $("#lib").click(function () {
+        $("#libpanel").slideToggle();
+    });
+});
+$(document).ready(function () {
+    $("#net").click(function () {
+        $("#netpanel").slideToggle();
+    });
+});
+$(document).ready(function () {
+    $("#job").click(function () {
+        $("#jobpanel").slideToggle();
+    });
 });
